@@ -60,3 +60,11 @@ sudo ./install.sh uninstall
 
 Backups: `/opt/dnx-status-v1-backups`.
 
+---
+
+## Verbindungen im DNX-Ökosystem
+
+![DNX Gesamtarchitektur & Verbindungen](docs/dnx-architektur-verbindungen.png)
+
+* **Verbindung zu `DNX-Styler`:** Im Styler schaltet `t_status` (`DNX Status`) diese Leiste ein/aus; zusätzlich lassen sich Statusleiste und Position (`◀ ▲ Mitte ▼ ▶` bzw. `dnx_status_pos`) über `#dnx-blk-receiver` zentral steuern und per `:8098/dnx/styler/std` vererben.
+* **Verbindung zu `DNX-Receiver-Account-Control`:** Das Recht `dnx_status` in `:8095/api/me` regelt die Sichtbarkeit je Benutzerrolle.
